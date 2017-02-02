@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04060A001E43765900B4E70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040609FF1E43765900B4E70C /* Assets.xcassets */; };
+		04060A021E43767600B4E70C /* candyLoadUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 04060A011E43767600B4E70C /* candyLoadUp.png */; };
 		040DA2781DAFD973004EEDD3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 040DA2741DAFD8C5004EEDD3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		04FFAE841DAF97E700EF87B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAE831DAF97E700EF87B0 /* AppDelegate.swift */; };
 		04FFAE861DAF97E700EF87B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAE851DAF97E700EF87B0 /* ViewController.swift */; };
 		04FFAE891DAF97E700EF87B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFAE871DAF97E700EF87B0 /* Main.storyboard */; };
-		04FFAE8B1DAF97E700EF87B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04FFAE8A1DAF97E700EF87B0 /* Assets.xcassets */; };
 		04FFAE8E1DAF97E700EF87B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFAE8C1DAF97E700EF87B0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -29,12 +30,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040609FF1E43765900B4E70C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04060A011E43767600B4E70C /* candyLoadUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = candyLoadUp.png; path = Assets.xcassets/candyLoadUp.png; sourceTree = "<group>"; };
 		040DA2741DAFD8C5004EEDD3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		04FFAE801DAF97E700EF87B0 /* iCandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCandy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFAE831DAF97E700EF87B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FFAE851DAF97E700EF87B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04FFAE881DAF97E700EF87B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		04FFAE8A1DAF97E700EF87B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04FFAE8D1DAF97E700EF87B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04FFAE8F1DAF97E700EF87B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -81,7 +83,8 @@
 				04FFAE831DAF97E700EF87B0 /* AppDelegate.swift */,
 				04FFAE851DAF97E700EF87B0 /* ViewController.swift */,
 				04FFAE871DAF97E700EF87B0 /* Main.storyboard */,
-				04FFAE8A1DAF97E700EF87B0 /* Assets.xcassets */,
+				040609FF1E43765900B4E70C /* Assets.xcassets */,
+				04060A011E43767600B4E70C /* candyLoadUp.png */,
 				04FFAE8C1DAF97E700EF87B0 /* LaunchScreen.storyboard */,
 				04FFAE8F1DAF97E700EF87B0 /* Info.plist */,
 			);
@@ -149,8 +152,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FFAE8E1DAF97E700EF87B0 /* LaunchScreen.storyboard in Resources */,
-				04FFAE8B1DAF97E700EF87B0 /* Assets.xcassets in Resources */,
+				04060A021E43767600B4E70C /* candyLoadUp.png in Resources */,
 				04FFAE891DAF97E700EF87B0 /* Main.storyboard in Resources */,
+				04060A001E43765900B4E70C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

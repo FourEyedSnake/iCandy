@@ -72,8 +72,11 @@ class ViewController: UIViewController {
        /* Alamofire.SessionManager.default.session.configuration.timeoutIntervalForResource = 1
         Alamofire.SessionManager.default.session.configuration.timeoutIntervalForRequest = 1*/
         
-        Alamofire.request("http://192.168.1.46:2648/speak", method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
+        //Alamofire.request("http://192.168.1.46:2648/speak", method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
         
+        //Alamofire.request(ipNameField.text!, method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
+        
+        Alamofire.request("http://192.168.1.178:2648/speak", method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
         
         print("we get here")
         
