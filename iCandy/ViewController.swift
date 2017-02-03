@@ -12,7 +12,7 @@ import Alamofire
 class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
     @available(iOS 2.0, *)
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        print("iOS 2.0")
+        //print("iOS 2.0")
         return 1
     }
 
@@ -28,8 +28,10 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
     @IBOutlet weak var languageField: UITextField!
     @IBOutlet weak var languagePicker: UIPickerView!
     
+    
     //var langPickerData: [String] = [String]()
     let langPickerData = ["English", "German", "French", "Italian", "Chinese", "American", "Korean"]
+    var accent = "English"
     
     func createJSON() -> Parameters{
         let parameters: Parameters = [
@@ -37,16 +39,20 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
             ["name": messageField.text!,
             "pitch": pitchSlider.value,
             "speed": speedSlider.value,
-            "lang": languageField.text!]
+            "lang": accent]
         ]
         return (parameters)
+    }
+    
+    func sortOutAddress(ip: String) -> String{
+        let fullAddress = "http://" + ip + "/api/speak"
+        print(fullAddress)
+        return fullAddress
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
         
         //set up language picker
         languagePicker.delegate = self
@@ -75,17 +81,17 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //languageField.text = langPickerData[row]
-        print(langPickerData[row])
+        accent = langPickerData[row]
     }
-
+    
     // MARK: Actions:
     
     @IBAction func sendButton(_ sender: UIButton) {
         let jsonPara = self.createJSON()
         print(jsonPara)
-        let a:DataRequest
-        a = Alamofire.request("http://192.168.1.178:2648/speak", method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
-        
+        //_ = Alamofire.request("http://10.72.42.171:5000/api/speak", method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
+        var a = sortOutAddress(ip: ipNameField.text!)
+        _ = Alamofire.request(a, method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
     }
     
     @IBAction func updateLabel(_ sender: UISlider) {
