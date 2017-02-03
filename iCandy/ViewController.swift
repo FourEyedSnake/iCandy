@@ -89,7 +89,6 @@ class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDeleg
     @IBAction func sendButton(_ sender: UIButton) {
         let jsonPara = self.createJSON()
         print(jsonPara)
-        //_ = Alamofire.request("http://10.72.42.171:5000/api/speak", method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
         var a = sortOutAddress(ip: ipNameField.text!)
         _ = Alamofire.request(a, method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
     }
