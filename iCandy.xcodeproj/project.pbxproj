@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		04060A001E43765900B4E70C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040609FF1E43765900B4E70C /* Assets.xcassets */; };
-		04060A021E43767600B4E70C /* candyLoadUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 04060A011E43767600B4E70C /* candyLoadUp.png */; };
 		04060A081E4387FF00B4E70C /* HiAppHere_com_com.ifttt.dobutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 04060A071E4387FF00B4E70C /* HiAppHere_com_com.ifttt.dobutton.png */; };
+		04060A101E4480B500B4E70C /* cAndyIncLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04060A0F1E4480B500B4E70C /* cAndyIncLogo.jpg */; };
 		040DA2781DAFD973004EEDD3 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 040DA2741DAFD8C5004EEDD3 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		04A7AC4A1E449C2800F02CEE /* pitch.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7AC481E449C2800F02CEE /* pitch.png */; };
+		04A7AC4B1E449C2800F02CEE /* speed.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7AC491E449C2800F02CEE /* speed.png */; };
+		04A7AC4D1E449FAD00F02CEE /* accent.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A7AC4C1E449FAD00F02CEE /* accent.png */; };
 		04FFAE841DAF97E700EF87B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAE831DAF97E700EF87B0 /* AppDelegate.swift */; };
 		04FFAE861DAF97E700EF87B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FFAE851DAF97E700EF87B0 /* ViewController.swift */; };
 		04FFAE891DAF97E700EF87B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04FFAE871DAF97E700EF87B0 /* Main.storyboard */; };
@@ -32,9 +35,12 @@
 
 /* Begin PBXFileReference section */
 		040609FF1E43765900B4E70C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		04060A011E43767600B4E70C /* candyLoadUp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = candyLoadUp.png; path = Assets.xcassets/candyLoadUp.png; sourceTree = "<group>"; };
 		04060A071E4387FF00B4E70C /* HiAppHere_com_com.ifttt.dobutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HiAppHere_com_com.ifttt.dobutton.png; sourceTree = "<group>"; };
+		04060A0F1E4480B500B4E70C /* cAndyIncLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cAndyIncLogo.jpg; path = Assets.xcassets/cAndyIncLogo.jpg; sourceTree = "<group>"; };
 		040DA2741DAFD8C5004EEDD3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		04A7AC481E449C2800F02CEE /* pitch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pitch.png; path = Assets.xcassets/pitch.png; sourceTree = "<group>"; };
+		04A7AC491E449C2800F02CEE /* speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = speed.png; path = Assets.xcassets/speed.png; sourceTree = "<group>"; };
+		04A7AC4C1E449FAD00F02CEE /* accent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accent.png; path = Assets.xcassets/accent.png; sourceTree = "<group>"; };
 		04FFAE801DAF97E700EF87B0 /* iCandy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCandy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04FFAE831DAF97E700EF87B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04FFAE851DAF97E700EF87B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,8 +92,11 @@
 				04FFAE851DAF97E700EF87B0 /* ViewController.swift */,
 				04FFAE871DAF97E700EF87B0 /* Main.storyboard */,
 				040609FF1E43765900B4E70C /* Assets.xcassets */,
+				04A7AC491E449C2800F02CEE /* speed.png */,
 				04060A071E4387FF00B4E70C /* HiAppHere_com_com.ifttt.dobutton.png */,
-				04060A011E43767600B4E70C /* candyLoadUp.png */,
+				04A7AC4C1E449FAD00F02CEE /* accent.png */,
+				04A7AC481E449C2800F02CEE /* pitch.png */,
+				04060A0F1E4480B500B4E70C /* cAndyIncLogo.jpg */,
 				04FFAE8C1DAF97E700EF87B0 /* LaunchScreen.storyboard */,
 				04FFAE8F1DAF97E700EF87B0 /* Info.plist */,
 			);
@@ -156,9 +165,12 @@
 			files = (
 				04060A081E4387FF00B4E70C /* HiAppHere_com_com.ifttt.dobutton.png in Resources */,
 				04FFAE8E1DAF97E700EF87B0 /* LaunchScreen.storyboard in Resources */,
-				04060A021E43767600B4E70C /* candyLoadUp.png in Resources */,
 				04FFAE891DAF97E700EF87B0 /* Main.storyboard in Resources */,
+				04A7AC4D1E449FAD00F02CEE /* accent.png in Resources */,
 				04060A001E43765900B4E70C /* Assets.xcassets in Resources */,
+				04060A101E4480B500B4E70C /* cAndyIncLogo.jpg in Resources */,
+				04A7AC4B1E449C2800F02CEE /* speed.png in Resources */,
+				04A7AC4A1E449C2800F02CEE /* pitch.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

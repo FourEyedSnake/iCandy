@@ -9,7 +9,13 @@
 import UIKit
 import Alamofire
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDataSource,UIPickerViewDelegate {
+    @available(iOS 2.0, *)
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        print("iOS 2.0")
+        return 1
+    }
+
 
     // MARK: Properties
     @IBOutlet weak var ipNameField: UITextField!
@@ -20,6 +26,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var speedSlider: UISlider!
     @IBOutlet weak var speedLabel: UILabel!
     @IBOutlet weak var languageField: UITextField!
+    @IBOutlet weak var languagePicker: UIPickerView!
+    
+    //var langPickerData: [String] = [String]()
+    let langPickerData = ["English", "German", "French", "Italian", "Chinese", "American", "Korean"]
     
     func createJSON() -> Parameters{
         let parameters: Parameters = [
@@ -36,21 +46,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        /*var leftSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe"))
-        var rightSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe"))
-        var upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe:"))
-        var downSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipe"))
-    
-        leftSwipe.direction = .left
-        rightSwipe.direction = .right
-        upSwipe.direction = .up
-        downSwipe.direction = .down
         
-        view.addGestureRecognizer(leftSwipe)
-        view.addGestureRecognizer(rightSwipe)
-        view.addGestureRecognizer(upSwipe)
-        view.addGestureRecognizer(downSwipe)*/
         
+        //set up language picker
+        languagePicker.delegate = self
+        languagePicker.dataSource = self
         
     }
 
@@ -59,6 +59,24 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: - data sources
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return langPickerData.count
+    }
+    
+    //MARK: Delegates
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return langPickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //languageField.text = langPickerData[row]
+        print(langPickerData[row])
+    }
 
     // MARK: Actions:
     
@@ -68,33 +86,18 @@ class ViewController: UIViewController {
         let a:DataRequest
         a = Alamofire.request("http://192.168.1.178:2648/speak", method: .post, parameters: jsonPara, encoding: JSONEncoding.default)
         
-        print("we get here")
-        
     }
     
     @IBAction func updateLabel(_ sender: UISlider) {
-        pitchLabel.text = "Pitch " + String(floor(pitchSlider.value * 100)) + "%"
+        //pitchLabel.text = "Pitch " + String(floor(pitchSlider.value * 100)) + "%"
+        pitchLabel.text = String(floor(pitchSlider.value * 100)) + "%"
     }
     
     
     @IBAction func updateLabelSpeed(_ sender: AnyObject) {
-        speedLabel.text = "Speed " + String(floor(speedSlider.value * 100)) + "%"
+        //speedLabel.text = "Speed " + String(floor(speedSlider.value * 100)) + "%"
+        speedLabel.text = String(floor(speedSlider.value * 100)) + "%"
     }
-    
-/*    func handleSwipe(sender: UISwipeGestureRecognizer){
-        if(sender.direction == .left) {
-            print("LEFT")
-        }
-        if(sender.direction == .right) {
-            print("RIGHT")
-        }
-        if(sender.direction == .up) {
-            print("UP")
-        }
-        if(sender.direction == .down) {
-            print("DOWN")
-        }
-    }*/
 }
 
 //192.168.1.46:2648/speak
